@@ -25,7 +25,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "C:/Program Files (x86)/WinSCP/WinSCP -i C:/Users/UW124UH/Downloads/dev_ops_ey.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat8/webapps"
+                        bat "WinSCP -i C:/Users/UW124UH/Downloads/dev_ops_ey.pem **/target/*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat8/webapps"
                     }
                 }
             }
